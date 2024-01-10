@@ -7,66 +7,93 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
+    <style>
+        header, main {
+            text-align: center;
+        }
+
+        #main_p {
+            max-width:32%;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
     <header>
+        <img id="header-img", width ="500", src="images/banner.png", alt="menu_header"/>
         <h1>Brazilski</h1>
-        <img id="header-img", width ="500", src="https://www.pinclipart.com/picdir/big/10-101429_gardners-inn-blue-mountains-restaurant-menu-header-restaurant.png", alt="menu_header"/>
-        <nav style="margin:0;display:inline;">
-            <h2 class="menu"></h2>
-            <h2 class="order-form"></h2>
+        <nav>
+            <a href="#menu">Menu</a> 
+            <a href="#order-form">Place your order</a> 
         </nav>
     </header>
     <main>
         <section>
-            <h2>Menu</h2>
+            <h2 id="#menu">Menu</h2>
             <article>
-                <img/>
-                <h3>Item01</h3>
-                <p>Paragraph of Item01</p>
+                <h3>1. Pljeskavica</h3>
+                <img width="250", src="images/pljeskavica.jpg"/>
+                <p id="main_p">Popular dish in the Balkan region, particularly in Serbia. It's a grilled ground meat patty, made from a mixture of minced beef and pork, seasoned with various spices.</p>
             </article>
             <article>
-                <img/>
-                <h3>Item02</h3>
-                <p>Paragraph of Item02</p>
+                <h3>2. Cevapi</h3>
+                <img width="250", src="images/cevapi.png" />
+                <p id="main_p"> Grilled minced meat sausages. The minced meat used is a mixture of ground beef and pork, seasoned with various spices.</p>
             </article>
             <article>
-                <img/>
-                <h3>Item03</h3>
-                <p>Paragraph of Item03</p>
+                <h3>3. Ustipci</h3>
+                <img width="250", src="images/ustipci.jpg"/>
+                <p id="main_p">Include minced or ground meat as one of the main ingredients. The minced or ground meat, a combination of beef and pork, is mixed with the batter made from ingredients like flour, eggs, and milk or yogurt.</p>
             </article>
         </section>
+        <br>
         <section>
-            <h2>Place Your Order</h2>
+            <h2 id="order-form">Place Your Order</h2>
             <form>
-                Item01 <label><input type="number"></label>
-                <br>
-                <label><textarea placeholder="Enter special request."></textarea></label>
-                <br>
-                Item02 <label><input type="number"></label>
-                <br>
-                <textarea placeholder="Enter special request."></textarea>
-                <br>
-                Item03 <label><input type="number"></label>
-                <br>
-                <textarea placeholder="Enter special request."></textarea>
+                <h3>1. Pljeskavica</h3><label for="amount_one">Amount: <input type="number" min="0" max="30" id="amount_one" style="max-width: 40px;"></label>
                 <br>
                 <br>
-                <label>Sides</label>
+                <label style="max-width: 10px;"> Do you have a special request? Let us know down below.</label>
                 <br>
-                <label><input type="checkbox"> Salad </label>
+                <textarea placeholder="Tell us what is your special request." rows="3" cols="50"></textarea>
                 <br>
-                <label><input type="checkbox"> French fries </label>
+                <br>
+                <h3>2. Cevapi</h3> <label for="amount_two">Amount: <input type="number" min="0" max="30" id="amount_two" style="max-width: 40px;"></label>
+                <br>
+                <br>
+                <label> Do you have a special request? Let us know down below.</label>
+                <br>
+                <textarea placeholder="Tell us what is your special request." rows="3" cols="50"></textarea>
+                <br>
+                <br>
+                <h3>3. Ustipci</h3> <label for="amount_three">Amount: <input type="number" min="0" max="30" id="amount_three" style="max-width: 40px;"></label>
+                <br>
+                <br>
+                <label> Do you have a special request? Let us know down below.</label>
+                <br>
+                <textarea placeholder="Tell us what is your special request." rows="3" cols="50"></textarea>
+                <br>
+                <br>
+                <h4>Sides</h4>
+                <label for="tomato"><input type="checkbox" id="tomato"> Tomato </label>
+                <br>
+                <label for="cabbage"><input type="checkbox" id="cabbage"> Cabbage </label>
+                <br>
+                <label for="onion"><input type="checkbox" id="onion"> Onion </label>
+                <br>
+                <label for="french_fries"><input type="checkbox" id="french_fries"> French fries </label>
+                <br>
                 <br>
                 <label>Gluten-free bun?</label> 
-                <label><input type="radio" name="option"> Yes</label>
-                <label><input type="radio" name="option"   > No</label>
+                <label for="gluten-free-yes"><input type="radio" name="option" id="gluten-free-yes"> Yes</label>
+                <label for="gluten-free-no"><input type="radio" name="option" id="gluten-free-no"> No</label>
                 <br>
-                <label><input type="submit" value="Go to checkout"></label>
+                <br>
+                <label for="submit_order"><input type="submit" value="Go to checkout" id="submit_order"></label>
             </form>
         </section>
     </main>
-    <footer>
+    <footer id="footer">
         <p>Made with love by @milan2</p>
     </footer>
 </body> 
